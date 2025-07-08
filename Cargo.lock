@@ -3,14 +3,6 @@
 version = 4
 
 [[package]]
-name = "Zero2ProdRust"
-version = "0.1.0"
-dependencies = [
- "actix-web",
- "tokio",
-]
-
-[[package]]
 name = "actix-codec"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1422,6 +1414,14 @@ dependencies = [
  "quote",
  "syn",
  "synstructure",
+]
+
+[[package]]
+name = "zero2prod"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "tokio",
 ]
 
 [[package]]
