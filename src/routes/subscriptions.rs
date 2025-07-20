@@ -31,7 +31,7 @@ pub async fn subscribe(
     {
         Ok(_) => HttpResponse::Ok().finish(),
         Err(e) => {
-            println!("Failed to execute query: {}", e);
+            println!("Failed to execute query: {e}");
             HttpResponse::InternalServerError().finish()
         }
     }
