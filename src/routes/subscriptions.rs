@@ -41,18 +41,11 @@ pub async fn subscribe(
     .await
     {
         Ok(_) => {
-            log::info!(
-                "request_id {} - New subscriber details have been saved",
-                request_id
-            );
+            log::info!("request_id {request_id} - New subscriber details have been saved");
             HttpResponse::Ok().finish()
-        },
+        }
         Err(e) => {
-            log::error!(
-                "request_id {} - Failed to execute query: {:?}",
-                request_id,
-                e
-            );
+            log::error!("request_id {request_id} - Failed to execute query: {:?}", e);
             HttpResponse::InternalServerError().finish()
         }
     }
